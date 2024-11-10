@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>Rohan Jaiswal</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <aside class="lft"><a href="index.html">
+            </aside>
+            <aside class="rgt">
+                <a class="Hamburger ">
+                    <span>
+                        <div class="line top"></div>
+                        <div class="line"></div>
+                        <div class="line bottom"></div>
+                    </span>
+                </a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#project">Projects</a></li>
+                        <li><a href="#skill">Skills</a></li>
+                        <li><a href="#" target="_blank">My Resume</a></li>
+
+                        <li><a href="#contact" class="btn">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="clear"></div>
+        </div>
+    </header>
+    <script type="text/javascript">$(".Hamburger").click(function () {
+            $(".Hamburger").toggleClass("active");
+            $("nav").toggleClass("active");
+        });</script>
+    <header>
+        <div class="wrap">
+            <aside class="lft">
+                <a href="index.html">
+                    <div class="lft-logo">
+                        <p>1Nonly</p>
+                        <p>Rohan</p>
+                    </div>
+                </a>
+            </aside>
+
+            <aside class="rgt">
+                <a class="Hamburger">
+                    <span>
+                        <div class="line top"></div>
+                        <div class="line"></div>
+                        <div class="line bottom"></div>
+                    </span>
+                </a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#project">Projects</a></li>
+                        <li><a href="#skill">Skills</a></li>
+                        <li><a href="#" target="_blank">My Resume</a></li>
+                        <li><a href="#contact" class="btn">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="clear"></div>
+        </div>
+    </header>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Toggle hamburger menu
+            $(".Hamburger").click(function () {
+                $(".Hamburger").toggleClass("active");
+                $("nav").toggleClass("active");
+            });
+
+            // Close hamburger menu when a navigation link is clicked
+            $("nav a").click(function () {
+                $(".Hamburger").removeClass("active");
+                $("nav").removeClass("active");
+            });
+        });
+    </script>
+
+    <section class="bnr">
+        <div class="banner">
+            <video autoplay muted loop playsinline preload="auto">
+                <source src="images/bnr-vid.mp4" type="video/mp4">
+                <img src="images/banner-v2.jpg" alt="Fallback Image">
+            </video>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var video = document.querySelector('video');
+                    if (video) {
+                        video.load(); // Reload the video
+                        video.play(); // Try to play it
+                    }
+                });
+            </script>
+
+            <div class="banner-text">
+                <h1 class="animated-text">
+                    I AM A UI UX DESIGNER &<br>
+                    FRONTEND DEVELOPER
+                </h1>
+
+            </div>
+        </div>
+    </section>
+    <div class="bdybg">
+        <section class="abt" id="about">
+            <div class="wrap">
+                <div>
+                    <span>What you can expect from me:</span>
+                    <h3 class="in-view">
+                        I'm a UI/UX designer and frontend developer, crafting responsive, user-friendly websites. I
+                        focus on minimalism, clean design, and precise alignment to elevate brand stories, visuals, and
+                        user experiences.
+                    </h3>
+                </div>
+                <aside class="lft">
+                    <span>All services</span>
+                    <ul>
+                        <li><span>1.</span>
+                            <p>Custom Website Design and Development</p>
+                        </li>
+                        <li><span>2.</span>
+                            <p>Responsive Designs for All Devices</p>
+                        </li>
+                        <li><span>3.</span>
+                            <p>Intuitive UI/UX for Better Engagement</p>
+                        </li>
+                    </ul>
+                </aside>
+                <aside class="rgt">
+                    <p>With <span class="experience-num">0</span> months of experience in training and designing
+                        presentations for domestic enterprises, I have developed a comprehensive understanding of layout
+                        presentation, content organization, and the effective use of motion effects. This foundation has
+                        equipped me with the skills to create visually compelling and engaging designs. Transitioning
+                        into
+                        web design, I now leverage this expertise alongside my knowledge of front-end programming to
+                        build
+                        user-friendly and dynamic websites. My goal is to craft digital experiences that not only
+                        showcase
+                        brand identities but also enhance user engagement and drive conversions.</p>
+                    <a href="#" target="_blank;">See My Resume</a>
+                </aside>
+                <div class="clear"></div>
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const experienceNum = document.querySelector('.experience-num');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateNumber(experienceNum, 0, 12, 1000); // Animate from 0 to 12 in 1 second (1000ms)
+                        }
+                    });
+                }, { threshold: 0.5 }); // Animation starts when 50% of the section is visible
+
+                const aboutSection = document.querySelector('#about'); // Observing the correct "About" section
+                observer.observe(aboutSection); // Observing the "About" section
+
+                function animateNumber(element, start, end, duration) {
+                    let startTime = null;
+
+                    function step(currentTime) {
+                        if (!startTime) startTime = currentTime;
+                        const progress = currentTime - startTime;
+                        const currentNumber = Math.min(Math.floor((progress / duration) * (end - start) + start), end);
+                        element.textContent = currentNumber;
+
+                        if (progress < duration) {
+                            requestAnimationFrame(step);
+                        }
+                    }
+
+                    requestAnimationFrame(step);
+                }
+            });
+        </script>
+
+
+        <section class="project" id="project">
+            <div class="wrap">
+                <div class="heading">
+                    <h2 class="ml6"><span class="text-wrapper">
+                            <span class="letters">My Projects</span>
+                        </span></h2>
+
+                    <h4>A Journey Through My Creative and Development Work</h4>
+                </div>
+
+                <script>
+                    // Select all elements with the class 'ml6'
+                    document.querySelectorAll('.ml6').forEach(function (element) {
+                        var textWrapper = element.querySelector('.letters');
+                        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+                        anime.timeline({ loop: true })
+                            .add({
+                                targets: element.querySelectorAll('.letter'),
+                                translateY: ["1.1em", 0],
+                                translateZ: 0,
+                                duration: 750,
+                                delay: (el, i) => 50 * i
+                            }).add({
+                                targets: element,
+                                opacity: 0,
+                                duration: 1000,
+                                easing: "easeOutExpo",
+                                delay: 1000
+                            });
+                    });
+                </script>
+                <ul>
+                    <li><a href="https://thecrayonsnetwork.com/" target="_blank">
+                            <div class="imgpnl"><img src="images/frst-prjct.jpg"></div>
+                            <h2>THE CRAYON NETWORK</h2>
+                            <ul class="inside">
+                                <li>Angular</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                            <p>UI/UX design and development for a seamless user experience.</p>
+                            <h5>See Project</h5>
+                        </a></li>
+
+                    <li><a href="https://osgalkaline.com/" target="_blank">
+                            <div class="imgpnl"><img src="images/osg.jpg"></div>
+                            <h2>OSG ALKALINE</h2>
+                            <ul class="inside">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                            <p>UI/UX design and development for a seamless user experience.</p>
+                            <h5>See Project</h5>
+                        </a></li>
+
+                    <li><a href="https://www.tecochemicals.com/" target="_blank">
+                            <div class="imgpnl"><img src="images/teco.jpg"></div>
+                            <h2>TECO CHEMICALS</h2>
+                            <ul class="inside">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                            <p>UI/UX design and development for a seamless user experience.</p>
+                            <h5>See Project</h5>
+                        </a></li>
+
+                    <li><a href="https://drjasdeepkaur.com/" target="_blank">
+                            <div class="imgpnl"><img src="images/skin.jpg"></div>
+                            <h2>SKIN AURA</h2>
+                            <ul class="inside">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                            <p>UI/UX design and development for a seamless user experience.</p>
+                            <h5>See Project</h5>
+                        </a></li>
+
+                    <li><a href="https://www.hcjpipe.com/" target="_blank">
+                            <div class="imgpnl"><img src="images/hcj.jpg"></div>
+                            <h2>HCJ PIPE</h2>
+                            <ul class="inside">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                            <p>UI/UX design and development for a seamless user experience.</p>
+                            <h5>See Project</h5>
+                        </a></li>
+
+                    <li class="waste"><a href="https://gulftechgroup.in/" target="_blank">
+                            <div class="imgpnl"><img src="images/gulf.jpg"></div>
+                            <h2>GULF TECH</h2>
+                            <ul class="inside">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                            <p>UI/UX design and development for a seamless user experience.</p>
+                            <h5>See Project</h5>
+                        </a></li>
+
+                    <li><a href="https://siyamahajan.com/" target="_blank">
+                            <div class="imgpnl"><img src="images/siya.jpg"></div>
+                            <h2>SIYA MAHAJAN</h2>
+                            <ul class="inside">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                            <p>UI/UX design and development for a seamless user experience.</p>
+                            <h5>See Project</h5>
+                        </a></li>
+
+                    <li><a href="http://tydoctyres.com/" target="_blank">
+                            <div class="imgpnl"><img src="images/tydoc.jpg"></div>
+                            <h2>TYDOC TYRE</h2>
+                            <ul class="inside">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                            <p>UI/UX design and development for a seamless user experience.</p>
+                            <h5>See Project</h5>
+                        </a></li>
+
+                    <li><a href="https://kulbir-travel.netlify.app/" target="_blank">
+                            <div class="imgpnl"><img src="images/kulbir.jpg"></div>
+                            <h2>KULBIR TRAVEL</h2>
+                            <ul class="inside">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                            <p>UI/UX design and development for a seamless user experience.</p>
+                            <h5>See Project</h5>
+                        </a></li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="skill" id="skill">
+            <div class="wrap">
+                <div class="heading">
+                    <h2 class="ml6"><span class="text-wrapper">
+                            <span class="letters">Skills & Abilities</span>
+                        </span></h2>
+                    <script>
+                        window.onload = function () {
+                            // Select all elements with the class 'ml6'
+                            document.querySelectorAll('.ml6').forEach(function (element) {
+                                var textWrapper = element.querySelector('.letters');
+                                textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+                                // Animation timeline for each .ml6 element
+                                anime.timeline({ loop: true })
+                                    .add({
+                                        targets: element.querySelectorAll('.letter'),
+                                        translateY: ["1.1em", 0],
+                                        translateZ: 0,
+                                        duration: 750,
+                                        delay: (el, i) => 50 * i
+                                    }).add({
+                                        targets: element,
+                                        opacity: 0,
+                                        duration: 1000,
+                                        easing: "easeOutExpo",
+                                        delay: 1000
+                                    });
+                            });
+                        }
+                    </script>
+
+                    <h4>Bringing Vision to Life with Proven Skills</h4>
+                </div>
+                <ul>
+                    <li>HTML (Hyper Text Markup Language)</li>
+                    <li>CSS (Cascading Style Sheets)</li>
+                    <li>JavaScript</li>
+                    <li>React JS</li>
+                    <li>Visual Studio</li>
+                    <li>Bootstrap</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="study">
+            <div class="wrap">
+                <div class="heading">
+                    <h2 class="ml6"><span class="text-wrapper">
+                            <span class="letters">Study Highlights</span>
+                        </span></h2>
+
+                    <h4>Elevating Skills Through Focused Study</h4>
+                </div>
+
+                <ul>
+                    <li>
+                        <h2>2019 - 2020</h2>
+                        <p>passed class 10th.</p><br>
+                        <p>From CBSE - Central Board of Secondary Education, Delhi.</p>
+                    </li>
+                    <li>
+                        <h2>2020 - 2021</h2>
+                        <p>Passed Class 12th.</p><br>
+                        <p>From CBSE - Central Board of Secondary Education, Delhi.</p>
+                    </li>
+                    <li>
+                        <h2>12 Month Experience</h2>
+                        <p>At Delbee Computer Institute (Basic to Advance Computer Course)</p>
+                    </li>
+
+                    <li>
+                        <h2>2022 - Present</h2>
+                        <p>Pursuing Bachelor of computer application</p><br>
+                        <p>Shayam Lal Collage, Shahdara-Delhi</p>
+                    </li>
+                    <li>
+                        <h2>2024 - Present</h2>
+                        <p>Frontend Course at CodingNest</p>
+                    </li>
+
+
+                </ul>
+            </div>
+        </section>
+
+        <section class="cont " id="contact">
+            <div class="wrap">
+                <span>That's all for now</span>
+                <h3>Got a project in mind?<br>
+                    Let's talk</h3>
+
+                <div class="line "></div>
+
+                <ul>
+                    <li><a href="mailto:rohanjaiswal93774@gmail.com"><span>Email
+                                Id:</span>rohanjaiswal93774@gmail.com</a>
+                    </li>
+
+                    <li><a href="tel:+918287493774"><span>Phone No:</span>+91 8287 49 3774</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="moving-text">
+            <h3>Rohan Jaiswal</h3>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+
+            links.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
